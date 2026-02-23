@@ -277,7 +277,6 @@ body{
 }
 
 /* ===== Móvil/Tablet: panel hamburguesa ===== */
-
 @media (max-width: 920px){
   .nav-toggle{ display:block; }
 
@@ -288,10 +287,7 @@ body{
     top: calc(100% + 10px);
     background: var(--dark);
     border-radius:14px;
-
-    /* ✅ buena técnica: mantenemos el radio sin que “rompa” */
     overflow:hidden;
-
     box-shadow: var(--shadow);
 
     max-height:0;
@@ -301,14 +297,11 @@ body{
     transition: max-height .25s ease, opacity .2s ease, transform .2s ease;
   }
 
-  /* ✅ FIX robusto: alto relativo + scroll vertical (no recorta Servicios) */
   .nav-panel.is-open{
     max-height: min(80vh, 560px);
     opacity:1;
     transform: translateY(0);
     pointer-events:auto;
-
-    /* OJO: usar overflow-y para no afectar layout horizontal */
     overflow-y:auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -366,8 +359,6 @@ body{
     flex-direction:column;
     align-items:stretch;
     width:100%;
-
-    /* ✅ asegura que el submenú quede por encima dentro del panel */
     position:relative;
     z-index:1;
   }
@@ -395,7 +386,6 @@ body{
   }
   .nav-drop::before{ display:none; }
 
-  /* ✅ suficiente alto para las 3 opciones (y futuras) */
   .nav-dropdown.is-open .nav-drop{
     max-height: 520px;
   }
