@@ -10,3 +10,19 @@ git pull
 
 sirve para descargar lo que 
 los demas hagan
+
+
+ eror si no le deja guardar
+
+Guardar al resolver un conflicto de Git
+
+Abres el archivo con conflicto.
+
+Arreglas el contenido (eliminas <<<<<<<, =======, >>>>>>>).
+
+Ctrl + S para guardar.
+
+Luego en la terminal:
+
+git add .
+git rebase --continue
