@@ -1,0 +1,409 @@
+<!-- nosotros.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros | MigraLaw</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css" >
+</head>
+
+<body data-page="nosotros">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">MIGRALAW</div>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="navPanel" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <nav class="nav" aria-label="Navegación principal">
+
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="nosotros.html" class="nav-link active">Nosotros</a>
+
+          <!-- ✅ Dropdown Servicios -->
+          <div class="nav-item nav-dropdown" id="servicesDropdown">
+            <button
+              class="nav-link nav-drop-btn"
+              id="servicesToggle"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="servicesMenu">
+              Servicios <span class="nav-chev" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="nav-drop" id="servicesMenu" role="menu" aria-label="Submenú servicios">
+              <a role="menuitem" class="nav-drop-link" href="servicios.html#individuales">Servicios individuales y de grupo</a>
+              <a role="menuitem" class="nav-drop-link" href="servicios.html#empresas">Servicios para empresas y profesionales</a>
+              <a role="menuitem" class="nav-drop-link" href="servicios.html#homologacion">Homologación de títulos</a>
+            </div>
+          </div>
+
+          <a href="noticias.html" class="nav-link">Noticias</a>
+        </nav>
+
+        <!-- ✅ ACCIONES: Mundo + Idiomas + Iniciar sesión + Registro -->
+        <div class="nav-actions">
+
+          <!-- ✅ Selector de idioma (con ícono de mundo tipo tu imagen) -->
+          <div class="lang-switch" id="langSwitch" aria-label="Selector de idioma">
+            <button class="lang-btn" id="langBtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="langMenu">
+              <span class="lang-planet" aria-hidden="true">
+                <!-- Ícono mundo (SVG) -->
+                <svg viewBox="0 0 24 24" class="globe-icon" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M3 12h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M12 3c3 2.6 3 15.4 0 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M12 3c-3 2.6-3 15.4 0 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M5.5 8.2h13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+                  <path d="M5.5 15.8h13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+                </svg>
+              </span>
+              <span class="lang-current" id="langCurrent">ES</span>
+            </button>
+
+            <ul class="lang-menu" id="langMenu" role="menu" aria-label="Opciones de idioma">
+              <li role="none">
+                <button role="menuitem" type="button" class="lang-item" data-lang="es">Español</button>
+              </li>
+              <li role="none">
+                <button role="menuitem" type="button" class="lang-item" data-lang="en">English</button>
+              </li>
+            </ul>
+          </div>
+
+          <a href="login.html" class="nav-link">Iniciar sesión</a>
+          <a href="registro.html" class="btn btn-outline">Registro</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner" aria-label="Imagen de portada">
+    <img src="assets/nosotros-banner.jpg" alt="Equipo legal" />
+  </section>
+
+  <!-- ¿QUÉ HACEMOS? -->
+  <section class="section section-what">
+    <div class="container">
+      <p class="kicker">¿Qué hacemos?</p>
+
+      <div class="title-block">
+        <span class="title-bar" aria-hidden="true"></span>
+        <h1 class="title-main">Asesoría legal clara, confiable y personalizada</h1>
+      </div>
+
+      <p class="lead">
+        Somos un equipo de abogados especializados que ofrece soluciones jurídicas integrales,
+        con un enfoque profesional, ético y humano.
+      </p>
+
+      <!-- SERVICIOS -->
+      <div class="services" role="list" aria-label="Servicios destacados">
+        <button class="service-btn" type="button" data-service="acompanamiento" aria-expanded="false">
+          <span class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="icon-svg" aria-hidden="true">
+              <circle cx="32" cy="22" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M14 54c2.5-10 10-16 18-16s15.5 6 18 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M10 26c0-12 10-22 22-22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M54 26c0-12-10-22-22-22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="service-label">Asesoría y<br/>acompañamiento</span>
+        </button>
+
+        <button class="service-btn" type="button" data-service="migracion" aria-expanded="false">
+          <span class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="icon-svg" aria-hidden="true">
+              <path d="M18 8h20l8 8v40H18z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M38 8v10h10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M24 28h20M24 36h20M24 44h14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="service-label">Migración sin<br/>complicaciones</span>
+        </button>
+
+        <button class="service-btn" type="button" data-service="regularizacion" aria-expanded="false">
+          <span class="icon-circle" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="icon-svg" aria-hidden="true">
+              <path d="M14 22l14-14 8 8-14 14z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M22 30l-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M36 18l16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M34 42h18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M32 46h22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="service-label">Regularización<br/>migratoria</span>
+        </button>
+      </div>
+
+      <!-- DETALLE SERVICIOS -->
+      <div class="service-detail-wrap">
+        <div class="detail-panel" id="serviceDetailPanel" aria-live="polite" aria-label="Detalle del servicio">
+          <div class="detail-card" data-detail="acompanamiento">
+            <h3>Asesoría y acompañamiento</h3>
+            <p>Te guiamos paso a paso: diagnóstico inicial, estrategia jurídica y acompañamiento durante todo el proceso.</p>
+            <ul class="detail-list">
+              <li>Revisión del caso y viabilidad</li>
+              <li>Plan de acción + checklist de documentos</li>
+              <li>Seguimiento y soporte en cada etapa</li>
+            </ul>
+          </div>
+
+          <div class="detail-card" data-detail="migracion">
+            <h3>Migración sin complicaciones</h3>
+            <p>Organizamos tu trámite para evitar errores, retrasos y requerimientos. Tú avanzas con claridad y respaldo.</p>
+            <ul class="detail-list">
+              <li>Preparación y validación documental</li>
+              <li>Acompañamiento en radicación</li>
+              <li>Monitoreo de respuestas y ajustes</li>
+            </ul>
+          </div>
+
+          <div class="detail-card" data-detail="regularizacion">
+            <h3>Regularización migratoria</h3>
+            <p>Te ayudamos a regularizar tu estatus con el camino más seguro, según tu situación personal o profesional.</p>
+            <ul class="detail-list">
+              <li>Permisos, residencias y renovaciones</li>
+              <li>Procesos de regularización</li>
+              <li>Asistencia en requerimientos</li>
+            </ul>
+          </div>
+
+          <div class="detail-actions">
+            <button class="btn btn-solid" id="closeServiceDetail" type="button">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO QUE NOS DEFINE -->
+  <section class="define-bar">
+    <h2>Lo que nos define</h2>
+  </section>
+
+  <!-- MISIÓN & VISIÓN (imagen lado + texto lado) -->
+  <section class="section mv-section">
+    <div class="container mv-stack">
+
+      <article class="mv2 reveal" data-reveal>
+        <div class="mv2-head">
+          <span class="mv2-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M32 14v-8M50 32h8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M45 19l6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Misión</h3>
+        </div>
+
+        <div class="mv2-grid mv2-img-left">
+          <figure class="mv2-media">
+            <img src="assets/mision.jpg" alt="Misión MigraLaw" />
+          </figure>
+
+          <div class="mv2-body">
+            <p>
+              Desarrollamos cada caso con análisis jurídico riguroso, comunicación constante
+              y seguimiento personalizado.
+            </p>
+
+            <ul class="check-list">
+              <li>Información clara en cada etapa</li>
+              <li>Seguimiento continuo del caso</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="mv2 reveal" data-reveal>
+        <div class="mv2-head">
+          <span class="mv2-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M18 56V8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M18 10c10 0 12 6 22 6s12-6 22-6v26c-10 0-12 6-22 6s-12-6-22-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3>Visión</h3>
+        </div>
+
+        <div class="mv2-grid mv2-img-right">
+          <figure class="mv2-media">
+            <img src="assets/vision.jpg" alt="Visión MigraLaw" />
+          </figure>
+
+          <div class="mv2-body">
+            <p>
+              Ser un equipo legal reconocido por su responsabilidad, ética y actualización constante,
+              ofreciendo soluciones legales seguras.
+            </p>
+
+            <ul class="check-list">
+              <li>Excelencia y profesionalismo</li>
+              <li>Resultados para nuestros clientes</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- VALORES PILARES -->
+  <section class="section values-section">
+    <div class="container">
+      <div class="values-head">
+        <h2 class="values-title">Valores pilares</h2>
+        <p class="values-subtitle">Desliza o usa las flechas para navegar.</p>
+      </div>
+
+      <div class="vc vc2" aria-label="Carrusel de valores pilares">
+        <button class="vc-arrow" id="vcPrev" type="button" aria-label="Anterior">‹</button>
+
+        <div class="vc-viewport" id="vcViewport">
+          <div class="vc-track" id="vcTrack">
+
+            <article class="vc-card vc2-card" tabindex="0">
+              <div class="vc2-media">
+                <img src="assets/valor-diligencia.jpg" alt="Diligencia" loading="lazy">
+              </div>
+              <div class="vc2-body">
+                <h3>Diligencia</h3>
+                <p>Atención rápida, orden y seguimiento en cada trámite para que avances con tranquilidad.</p>
+              </div>
+            </article>
+
+            <article class="vc-card vc2-card" data-default="true" tabindex="0">
+              <div class="vc2-media">
+                <img src="assets/valor-honestidad.jpg" alt="Honestidad" loading="lazy">
+              </div>
+              <div class="vc2-body">
+                <h3>Honestidad</h3>
+                <p>Transparencia total en tiempos, costos y opciones reales: claridad desde el primer día.</p>
+              </div>
+            </article>
+
+            <article class="vc-card vc2-card" tabindex="0">
+              <div class="vc2-media">
+                <img src="assets/valor-seriedad.jpg" alt="Seriedad" loading="lazy">
+              </div>
+              <div class="vc2-body">
+                <h3>Seriedad</h3>
+                <p>Responsabilidad, ética y compromiso profesional. Tu caso se maneja con rigor.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="vc-arrow" id="vcNext" type="button" aria-label="Siguiente">›</button>
+      </div>
+
+      <div class="vc-dots" id="vcDots" aria-label="Indicadores del carrusel"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>¿Necesitas orientación legal ahora?</h2>
+      <p>Agenda una asesoría inicial y recibe acompañamiento profesional.</p>
+      <a href="formulario.html" class="btn-cta" id="ctaBtn">Agenda tu asesoría<br/>inicial</a>
+      <small class="cta-note">Información totalmente confidencial</small>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>MigraLegal</h4>
+        <p class="footer-accent">Queremos darte una asesoría personalizada.</p>
+
+        <div class="footer-map">
+          <iframe
+            title="Mapa MigraLaw"
+            src="https://www.google.com/maps?q=calle%20serrano%2099%2C%2028006%20Madrid%2C%20Espa%C3%B1a&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces Rápido</h4>
+        <ul class="footer-links">
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="#">Políticas de privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-contact">
+          <li>📞 -Colombia : +57 3115372546</li>
+          <li>📞 -España : +34 63542453</li>
+          <li>✉️ contacto@migralaw.com</li>
+          <li>📍 calle serrano 99, 28006<br/>Madrid, España</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Redes profesionales</h4>
+        <p class="footer-muted">síganos para actualizaciones legales.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">⌁</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      Todos los derechos reservados migralaw asesores
+    </div>
+  </footer>
+
+  <!-- CHATBOT -->
+  <div class="chatbot">
+    <button class="chatbot-fab" id="chatbotFab" type="button" aria-label="Abrir chatbot">
+      <img src="assets/chatbot.png" alt="Chatbot" />
+    </button>
+
+    <div class="chatbot-window" id="chatbotWindow" hidden>
+      <div class="chatbot-header">
+        <strong>Chat MigraLaw</strong>
+        <button class="chatbot-close" id="chatbotClose" type="button" aria-label="Cerrar">✕</button>
+      </div>
+
+      <div class="chatbot-body" id="chatbotBody">
+        <div class="msg msg-bot">Hola 👋 Soy tu asistente virtual. ¿En qué puedo ayudarte?</div>
+      </div>
+
+      <form class="chatbot-form" id="chatbotForm">
+        <input class="chatbot-input" id="chatbotInput" placeholder="Escribe tu mensaje..." autocomplete="off"/>
+        <button class="chatbot-send" type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
