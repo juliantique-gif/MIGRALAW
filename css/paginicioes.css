@@ -22,6 +22,398 @@ body{
     color:var(--text);
     background:#fff;
 }
+/* ===== Header ===== */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1200;
+  background: var(--dark);
+  color:#fff;
+}
+
+.nav-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:14px 0;
+  position:relative;
+}
+
+.logo{ font-weight:600; letter-spacing:.6px; }
+
+/* En desktop no crea caja */
+.nav-panel{ display:contents; }
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+.nav-link{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.95;
+  padding:10px 6px;
+  position:relative;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+}
+.nav-link:hover{ opacity:1; }
+.nav-link.active{ opacity:1; }
+.nav-link.active::after{
+  content:"";
+  position:absolute;
+  left:6px;
+  right:6px;
+  bottom:4px;
+  height:2px;
+  background: var(--accent);
+  border-radius:999px;
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  border-radius:999px;
+  padding:10px 16px;
+  font-weight:600;
+  font-size:14px;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+
+.btn-outline{
+  border-color:#fff;
+  color:#fff;
+  background:transparent;
+}
+.btn-outline:hover{
+  border-color: var(--accent);
+  background: rgba(46,182,179,.18);
+}
+
+/* ===== Selector de idioma (mundo SVG) ===== */
+.lang-switch{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+}
+
+.lang-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  color:#fff;
+  padding:8px 10px;
+  border-radius:999px;
+  font-size:13px;
+  line-height:1;
+}
+
+.lang-btn:hover{
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.26);
+}
+
+.lang-planet{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--accent);
+}
+
+.globe-icon{
+  width:18px;
+  height:18px;
+  display:block;
+}
+
+.lang-current{
+  font-weight:700;
+  letter-spacing:.3px;
+}
+
+.lang-menu{
+  position:absolute;
+  top: calc(100% + 10px);
+  right:0;
+  min-width: 160px;
+  list-style:none;
+  margin:0;
+  padding:8px;
+  border-radius: 12px;
+  background:#fff;
+  color:#111;
+  box-shadow: 0 18px 45px rgba(0,0,0,.22);
+  border: 1px solid rgba(0,0,0,.08);
+  display:none;
+  z-index:2000;
+}
+
+.lang-switch.is-open .lang-menu{ display:block; }
+
+.lang-item{
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:10px 10px;
+  border-radius:10px;
+  font-size:13px;
+}
+
+.lang-item:hover{
+  background: rgba(46,182,179,.12);
+}
+
+/* Hamburguesa */
+.nav-toggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:12px;
+  background:rgba(255,255,255,.12);
+  cursor:pointer;
+  padding:10px;
+}
+.nav-toggle span{
+  display:block;
+  width:100%;
+  height:2px;
+  background:#fff;
+  border-radius:2px;
+  margin:6px 0;
+}
+
+/* ===== ✅ Dropdown Servicios (Desktop) ===== */
+.nav-dropdown{ position:relative; display:inline-flex; align-items:center; }
+
+.nav-drop-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+.nav-chev{
+  font-size:12px;
+  transform: translateY(1px);
+  opacity:.95;
+  transition: transform .15s ease;
+}
+
+.nav-dropdown.is-open .nav-chev{
+  transform: translateY(1px) rotate(180deg);
+}
+
+/* Caja dropdown */
+.nav-drop{
+  position:absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 260px;
+  background:#fff;
+  border-radius: 10px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.22);
+  border: 1px solid rgba(0,0,0,.08);
+  padding:10px 0;
+  opacity:0;
+  pointer-events:none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.nav-drop::before{
+  content:"";
+  position:absolute;
+  top:-8px;
+  left:50%;
+  transform: translateX(-50%);
+  border-left:8px solid transparent;
+  border-right:8px solid transparent;
+  border-bottom:8px solid #fff;
+  filter: drop-shadow(0 -1px 0 rgba(0,0,0,.06));
+}
+
+.nav-dropdown.is-open .nav-drop{
+  opacity:1;
+  pointer-events:auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Links del dropdown */
+.nav-drop-link{
+  display:block;
+  text-decoration:none;
+  color:#1f1f1f;
+  font-size:13px;
+  padding:10px 14px;
+  text-align:center;
+  line-height:1.25;
+}
+.nav-drop-link:hover{
+  background: rgba(46,182,179,.12);
+}
+
+@media (min-width: 921px){
+  .nav-dropdown:hover .nav-drop{
+    opacity:1;
+    pointer-events:auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown:hover .nav-chev{ transform: translateY(1px) rotate(180deg); }
+}
+
+/* ===== Móvil/Tablet: panel hamburguesa ===== */
+
+@media (max-width: 920px){
+  .nav-toggle{ display:block; }
+
+  .nav-panel{
+    display:block;
+    position:absolute;
+    left:0; right:0;
+    top: calc(100% + 10px);
+    background: var(--dark);
+    border-radius:14px;
+
+    /* ✅ buena técnica: mantenemos el radio sin que “rompa” */
+    overflow:hidden;
+
+    box-shadow: var(--shadow);
+
+    max-height:0;
+    opacity:0;
+    transform: translateY(-8px);
+    pointer-events:none;
+    transition: max-height .25s ease, opacity .2s ease, transform .2s ease;
+  }
+
+  /* ✅ FIX robusto: alto relativo + scroll vertical (no recorta Servicios) */
+  .nav-panel.is-open{
+    max-height: min(80vh, 560px);
+    opacity:1;
+    transform: translateY(0);
+    pointer-events:auto;
+
+    /* OJO: usar overflow-y para no afectar layout horizontal */
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav{
+    flex-direction:column;
+    gap:0;
+    padding:8px 0;
+    align-items:stretch;
+  }
+
+  .nav-link{
+    width:100%;
+    padding:12px 16px;
+    text-align:left;
+  }
+
+  .nav-link.active{
+    background: rgba(46,182,179,.16);
+    border-left: 4px solid var(--accent);
+  }
+  .nav-link.active::after{ display:none; }
+
+  .nav-actions{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:12px 16px 16px;
+    border-top:1px solid rgba(255,255,255,.12);
+  }
+
+  /* Idiomas en móvil: dentro del panel */
+  .lang-switch{ width:100%; }
+  .lang-btn{
+    width:100%;
+    justify-content:space-between;
+    padding:10px 12px;
+  }
+  .lang-menu{
+    position:static;
+    display:none;
+    margin-top:8px;
+    width: 100%;
+    background: rgba(255,255,255,.06);
+    border:none;
+    box-shadow:none;
+    color:#fff;
+    padding:6px;
+  }
+  .lang-switch.is-open .lang-menu{ display:block; }
+  .lang-item{ color:#fff; text-align:left; }
+  .lang-item:hover{ background: rgba(46,182,179,.16); }
+
+  /* Dropdown en móvil: acordeón dentro del panel */
+  .nav-dropdown{
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+
+    /* ✅ asegura que el submenú quede por encima dentro del panel */
+    position:relative;
+    z-index:1;
+  }
+
+  .nav-drop{
+    position:static;
+    transform:none;
+    min-width:auto;
+    background: rgba(255,255,255,.06);
+    border: none;
+    box-shadow:none;
+    border-radius: 12px;
+
+    width: min(420px, calc(100% - 24px));
+    margin: 6px auto 6px;
+
+    padding: 6px 0;
+
+    max-height:0;
+    overflow:hidden;
+    opacity:1;
+    pointer-events:auto;
+
+    transition: max-height .22s ease;
+  }
+  .nav-drop::before{ display:none; }
+
+  /* ✅ suficiente alto para las 3 opciones (y futuras) */
+  .nav-dropdown.is-open .nav-drop{
+    max-height: 520px;
+  }
+
+  .nav-drop-link{
+    color:#fff;
+    opacity:.95;
+    text-align:center;
+    padding:10px 12px;
+  }
+  .nav-drop-link:hover{
+    background: rgba(46,182,179,.16);
+  }
+}
 
 /* CONTENEDOR GLOBAL (ARREGLA EL CENTRADO DEL FOOTER) */
 .contenedor{
