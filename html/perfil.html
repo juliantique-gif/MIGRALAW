@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migra Low Asesores</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo-contenedor">
+            <img src="../img/logo.jpeg" alt="Logo" class="logo">
+            <h1>Migra Low Asesores</h1>
+        </div>
+
+        <div class="usuario-contenedor">
+            <span class="idioma">🌐</span>
+
+            <div class="usuario" id="usuarioBtn">
+                <img src="../img/user.png" alt="Usuario">
+                <span>Juan Casado</span>
+
+                <!-- Menú desplegable -->
+                <div class="menu-usuario" id="menuUsuario">
+                    <a href="#">Mi Perfil</a>
+                    <a href="#" id="btnSalir">Salir</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <img src="../img/banner.jpg" alt="Banner">
+    </section>
+
+    <!-- CONTENIDO -->
+    <main class="contenedor">
+
+        <!-- PROGRESO -->
+        <section class="progreso">
+            <h2>Progreso del trámite</h2>
+
+            <div class="barra-progreso">
+                <div class="paso completado">
+                    <div class="circulo">✓</div>
+                    <p>Reserva de cita</p>
+                </div>
+
+                <div class="linea activa"></div>
+
+                <div class="paso completado">
+                    <div class="circulo">✓</div>
+                    <p>Asesoría</p>
+                </div>
+
+                <div class="linea activa"></div>
+
+                <div class="paso completado">
+                    <div class="circulo">✓</div>
+                    <p>Validación de documentos</p>
+                </div>
+
+                <div class="linea activa"></div>
+
+                <div class="paso actual">
+                    <div class="circulo">✓</div>
+                    <p>Solicitud radicada</p>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="paso pendiente">
+                    <div class="circulo">✓</div>
+                    <p>Resolución</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRID PRINCIPAL -->
+        <section class="grid">
+
+            <!-- HISTORIAL -->
+            <div class="card historial">
+                <div class="card-header">
+                    <h3>Historial del trámite</h3>
+                    <span class="menu-puntos">•••</span>
+                </div>
+
+                <ul class="lista-historial">
+                    <li class="item completado">Reserva de cita</li>
+                    <li class="item completado">Asesoría</li>
+                    <li class="item completado">Validación de documentos</li>
+                </ul>
+            </div>
+
+            <!-- DOCUMENTOS -->
+            <div class="card documentos">
+                <h3>Arrastra tus documentos aquí</h3>
+
+                <div class="zona-drop" id="dropZone">
+                    <p>O selecciona tus archivos</p>
+                    <input type="file" id="inputFile" multiple hidden>
+                    <button class="btn-subir" id="btnSeleccionar">
+                        Seleccionar documentos
+                    </button>
+                </div>
+
+                <div class="lista-archivos" id="listaArchivos">
+                    <div class="archivo">📄 Título secundario</div>
+                    <div class="archivo">📄 Título secundario</div>
+                    <div class="archivo">📄 Título secundario</div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+<script src="js/scriptperfil.js"></script>
+</body>
+</html>

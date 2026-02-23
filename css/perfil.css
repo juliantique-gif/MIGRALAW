@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f3f4f6;
+}
+
+/* HEADER */
+.header {
+    background: #0e5b63;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 35px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.usuario img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.menu-usuario {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    min-width: 120px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu-usuario a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-usuario a:hover {
+    background: #f0f0f0;
+}
+
+/* BANNER */
+.banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    padding: 25px;
+}
+
+/* PROGRESO */
+.progreso h2 {
+    margin-bottom: 15px;
+}
+
+.barra-progreso {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paso {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.paso:hover {
+    transform: scale(1.05);
+}
+
+.circulo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-weight: bold;
+}
+
+.completado .circulo {
+    background: #28a745;
+    color: white;
+}
+
+.actual .circulo {
+    background: #1b8a7a;
+    color: white;
+    box-shadow: 0 0 10px rgba(27,138,122,0.6);
+}
+
+.pendiente .circulo {
+    background: white;
+    border: 2px solid #bbb;
+}
+
+.linea {
+    height: 4px;
+    flex: 1;
+    background: #ccc;
+}
+
+.linea.activa {
+    background: #28a745;
+}
+
+/* GRID */
+.grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+/* CARDS */
+.card {
+    background: #d9d9d9;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.lista-historial {
+    list-style: none;
+}
+
+.item {
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+.item.completado::before {
+    content: "✔ ";
+    color: green;
+    font-weight: bold;
+}
+
+/* DOCUMENTOS */
+.documentos {
+    border: 2px dashed #9ca3af;
+    text-align: center;
+    background: #e5e7eb;
+}
+
+.zona-drop {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.zona-drop:hover {
+    background: #eef2f7;
+}
+
+.btn-subir {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #0e7c75;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-subir:hover {
+    background: #095e59;
+}
+
+.lista-archivos {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.archivo {
+    padding: 8px 0;
+    border-bottom: 1px solid #bdbdbd;
+}

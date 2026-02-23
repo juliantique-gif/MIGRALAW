@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* FONDO */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image: url("../img/fondoregis.jpg"); /* Imagen local */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Capa oscura */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    z-index:1;
+}
+
+/* BOTÓN VOLVER */
+.volver{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:#2bbbad;
+    color:white;
+    padding:10px 15px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    z-index:2;
+}
+
+.volver:hover{
+    background:#249c91;
+}
+
+/* LOGO */
+.logo{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:100px;
+    z-index:2;
+    border-radius:50%;
+}
+
+/* CONTENEDOR */
+.contenedor{
+    position:relative;
+    z-index:2;
+    width:380px;
+    padding:40px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color:white;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:38px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:500;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    outline:none;
+    background:rgba(255,255,255,0.8);
+    color:#333;
+}
+
+.telefono{
+    display:flex;
+    gap:10px;
+}
+
+.telefono select{
+    width:30%;
+}
+
+.telefono input{
+    width:70%;
+}
+
+.boton{
+    margin-top:25px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#2bbbad;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.boton:hover{
+    background:#249c91;
+}

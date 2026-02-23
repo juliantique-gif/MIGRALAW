@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Asesoría inicial</title>
+    <link rel="stylesheet" href="../css/forminicial.css">
+</head>
+<body>
+
+    <!-- Overlay oscuro -->
+    <div class="background-overlay"></div>
+
+    <!-- Barra superior -->
+    <header class="top-bar">
+
+        <!-- BOTÓN VOLVER FUNCIONAL CON HREF -->
+        <a href="index.html" class="btn-volver">
+            ← Volver
+        </a>
+
+        <!-- Logo -->
+        <img src="../img/migra.jpeg" alt="Logo" class="logo">
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <h1>Formulario</h1>
+        <h2>Asesoría inicial</h2>
+
+        <div class="form-card">
+            <form id="formulario">
+
+                <!-- Nombres -->
+                <label for="nombre">Nombres</label>
+                <input 
+                    type="text" 
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ej: Juan"
+                    required
+                >
+
+                <!-- Apellidos -->
+                <label for="apellido">Apellidos</label>
+                <input 
+                    type="text" 
+                    id="apellido"
+                    name="apellido"
+                    placeholder="Ej: Pérez"
+                    required
+                >
+                
+                <!-- Tipo de consulta -->
+                <label for="tipo">Tipo de consulta</label>
+                <div class="select-wrapper">
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option>Asesoría fiscal</option>
+                        <option>Asesoría contable</option>
+                        <option>Asesoría personalizada</option>
+                        <option>Asesoría para empresas</option>
+                    </select>
+                </div>
+
+                <!-- Teléfono -->
+                <label for="telefono">Teléfono</label>
+                <input 
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Digite su número de teléfono"
+                    inputmode="numeric"
+                    maxlength="10"
+                    required
+                >
+
+                <!-- Correo -->
+                <label for="correo">Correo</label>
+                <input 
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Ingrese su correo (ej: usuario@gmail.com)"
+                    required
+                >
+
+                <!-- Términos -->
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">
+                        Acepto 
+                        <a href="terminos.html" class="link-terminos">
+                            Términos y Condiciones
+                        </a>
+                    </label>
+                </div>
+
+                <!-- Botón enviar -->
+                <button type="submit" class="btn-enviar">
+                    Solicitar asesoría
+                </button>
+
+                <p id="mensaje"></p>
+            </form>
+        </div>
+    </main>
+
+<script src="js/scriptformini.js"></script>
+</body>
+</html>

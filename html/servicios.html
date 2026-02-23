@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicios - Estancia por estudios</title>
+    <link rel="stylesheet" href="../css/serviestilo.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">MigraLaw Asesores</div>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#" class="activo">Servicios</a>
+        <a href="#">Noticias</a>
+        <a href="#">Iniciar sesión</a>
+        <button class="btn-registro">Registro</button>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+    <h1>Servicios</h1>
+    <p>Individuales y grupales</p>
+</section>
+
+<!-- CONTENIDO -->
+<div class="contenedor">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h3>Categorías</h3>
+
+        <div class="menu-item" onclick="toggleVisados()">Visados</div>
+        <div class="submenu" id="submenuVisados">
+            <div onclick="mostrarEstudios()">Estancia por estudios</div>
+            <div onclick="limpiarContenido()">Visado audiovisual</div>
+        </div>
+
+        <div class="menu-item" onclick="limpiarContenido()">Trabajo</div>
+        <div class="menu-item" onclick="limpiarContenido()">Inversión</div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+
+        <h2>Estancia por estudios</h2>
+        <p class="descripcion">
+            Permiso de residencia temporal para personas no comunitarias que autoriza vivir en el país por más de 90 días con fines de estudio.
+        </p>
+
+        <div class="formacion">
+            <p>¿Qué tipo de formación aplica?</p>
+
+            <div class="botones">
+                <button>Grado medio o superior</button>
+                <button>Grados universitarios</button>
+                <button>Másteres y doctorados</button>
+            </div>
+
+            <small>Más programas formativos equivalentes</small>
+        </div>
+
+        <div class="info-box">
+            <h4>¿Puedo trabajar?</h4>
+            <p>
+                Sí. Este visado concede autorización para trabajar hasta 30 horas semanales y se otorga por el tiempo que dure la formación acreditada.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h4>Importante</h4>
+            <p>
+                De conformidad con el Real Decreto 1155/2024, art. 36, la solicitud debe presentarse con una antelación mínima de dos meses antes del inicio de los estudios.
+            </p>
+        </div>
+
+        <div class="asesoria">
+            <p>Reserva tu cita y conoce requisitos y beneficios.</p>
+            <button class="btn-asesoria">Solicitar Asesoría</button>
+        </div>
+
+    </main>
+
+</div>
+
+<footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>MigraLegal</h4>
+        <p class="footer-accent">Queremos darte una asesoría personalizada.</p>
+
+        <div class="footer-map">
+          <iframe
+            title="Mapa MigraLaw"
+            src="https://www.google.com/maps?q=calle%20serrano%2099%2C%2028006%20Madrid%2C%20Espa%C3%B1a&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces Rápido</h4>
+        <ul class="footer-links">
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="#">Políticas de privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-contact">
+          <li>📞 -Colombia : +57 3115372546</li>
+          <li>📞 -España : +34 63542453</li>
+          <li>✉️ contacto@migralaw.com</li>
+          <li>📍 calle serrano 99, 28006<br/>Madrid, España</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Redes profesionales</h4>
+        <p class="footer-muted">síganos para actualizaciones legales.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">⌁</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      Todos los derechos reservados migralaw asesores
+    </div>
+  </footer>
+<script src="js/scriptservi.js"></script>
+
+
+</body>
+</html>
