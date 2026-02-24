@@ -518,7 +518,7 @@ nav a{
 /* HERO */
 
 .hero{
-    height:420px;
+    height:410px;
     background:url("../img/fondoinicio.jpeg") center/cover no-repeat;
     position:relative;
     color:white;
@@ -534,6 +534,8 @@ nav a{
 }
 .letra{
   color: var(--card);
+  margin-top: -40px;
+  
 }
 .hero-contenido{
     position:absolute;
