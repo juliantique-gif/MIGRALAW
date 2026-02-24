@@ -530,7 +530,16 @@ input, select {
     font-size: 14px;
     text-align: center;
 }
-
+#prefijo {
+    width: 90px;        /* ancho más pequeño */
+    padding: 10px;
+    font-size: 14px;
+}
+#telefono {
+    width: 69%;        /* ancho más pequeño */
+    padding: 10px;
+    font-size: 14px;
+}
 /* Select personalizado */
 .select-wrapper {
     position: relative;
