@@ -532,7 +532,9 @@ nav a{
     background:rgba(0,0,0,0.55);
     z-index:1;
 }
-
+.letra{
+  color: var(--card);
+}
 .hero-contenido{
     position:absolute;
     top:50%;
