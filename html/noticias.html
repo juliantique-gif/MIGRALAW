@@ -9,80 +9,71 @@
 
 <body>
       <!-- HEADER -->
-  <header class="header">
-    <div class="container nav-container">
-      <div class="logo">MIGRALAW</div>
+<header class="nav">
+    <div class="nav__container">
 
-      <button class="nav-toggle" id="navToggle" aria-controls="navPanel" aria-expanded="false" type="button">
+      <!-- Logo -->
+      <a href="paginicio.html" class="nav__logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <div class="nav-panel" id="navPanel">
-        <nav class="nav" aria-label="Navegación principal">
+      <!-- Links / Menú -->
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="paginicio.html" class="nav__link" data-page="paginicio.html">Inicio</a>
+        <a href="nosotros.html" class="nav__link" data-page="nosotros.html">Nosotros</a>
 
+<<<<<<< HEAD
           <a href="paginicio.html" class="nav-link">Inicio</a>
           <a href="nosotros.html" class="nav-link">Nosotros</a>
           
 
+=======
+        <!-- Servicios con dropdown -->
+        <div class="nav__dropdown">
+          <button class="nav__link nav__dropbtn" type="button">
+            Servicios <span class="nav__arrow">▾</span>
+          </button>
+>>>>>>> 5a2941f (Mis cambios)
 
-          <!-- ✅ Dropdown Servicios -->
-          <div class="nav-item nav-dropdown" id="servicesDropdown">
-            <button
-              class="nav-link nav-drop-btn"
-              id="servicesToggle"
-              type="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              aria-controls="servicesMenu">
-              Servicios <span class="nav-chev" aria-hidden="true">▾</span>
+          <div class="nav__dropmenu">
+            <a href="servicios-individuales-grupos.html">Servicios individuales y de grupos</a>
+            <a href="servicios-empresas-profesionales.html">Servicios para empresas y profesionales</a>
+            <a href="homologacion-titulos.html">Homologación de títulos</a>
+          </div>
+        </div>
+
+        <a href="noticias.html" class="nav__link" data-page="noticias.html">Noticias</a>
+
+        <!-- Acciones (en móvil quedan dentro del menú) -->
+        <div class="nav__actions">
+
+          <!-- Idioma (mundo) -->
+          <div class="nav__dropdown nav__dropdown--lang">
+            <button class="nav__langbtn" type="button" aria-label="Cambiar idioma">
+              <span class="nav__world" aria-hidden="true">🌍</span>
+              <span class="nav__langtext">ES</span>
+              <span class="nav__arrow">▾</span>
             </button>
 
-            <div class="nav-drop" id="servicesMenu" role="menu" aria-label="Submenú servicios">
-              <a role="menuitem" class="nav-drop-link" href="servicios.html#individuales">Servicios individuales y de grupo</a>
-              <a role="menuitem" class="nav-drop-link" href="servicios.html#empresas">Servicios para empresas y profesionales</a>
-              <a role="menuitem" class="nav-drop-link" href="servicios.html#homologacion">Homologación de títulos</a>
+            <div class="nav__dropmenu nav__dropmenu--right">
+              <a href="?lang=es" data-lang="es">Español</a>
+              <a href="?lang=en" data-lang="en">English</a>
             </div>
           </div>
 
-          <a href="noticias.html" class="nav-link">Noticias</a>
-        </nav>
-
-        <!-- ✅ ACCIONES: Mundo + Idiomas + Iniciar sesión + Registro -->
-        <div class="nav-actions">
-
-          <!-- ✅ Selector de idioma (con ícono de mundo tipo tu imagen) -->
-          <div class="lang-switch" id="langSwitch" aria-label="Selector de idioma">
-            <button class="lang-btn" id="langBtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="langMenu">
-              <span class="lang-planet" aria-hidden="true">
-                <!-- Ícono mundo (SVG) -->
-                <svg viewBox="0 0 24 24" class="globe-icon" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                  <path d="M3 12h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M12 3c3 2.6 3 15.4 0 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M12 3c-3 2.6-3 15.4 0 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M5.5 8.2h13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
-                  <path d="M5.5 15.8h13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
-                </svg>
-              </span>
-              <span class="lang-current" id="langCurrent">ES</span>
-            </button>
-
-            <ul class="lang-menu" id="langMenu" role="menu" aria-label="Opciones de idioma">
-              <li role="none">
-                <button role="menuitem" type="button" class="lang-item" data-lang="es">Español</button>
-              </li>
-              <li role="none">
-                <button role="menuitem" type="button" class="lang-item" data-lang="en">English</button>
-              </li>
-            </ul>
-          </div>
-
-          <a href="InicioSesion.html" class="nav-link">Iniciar sesión</a>
-          <a href="registro.html" class="btn btn-outline">Registro</a>
+          <a href="InicioSesion.html" class="nav__login">Iniciar sesión</a>
+          <a href="registro.html" class="nav__btn">Registro</a>
         </div>
-      </div>
+      </nav>
+
     </div>
   </header>
+
 
 <div class="page">
 
@@ -176,6 +167,6 @@
       </form>
     </div>
   </div>
-
+      <script src="../js/script.js"></script>
 </body>
 </html>

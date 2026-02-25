@@ -7,19 +7,64 @@
 </head>
 <body>
 
-<header class="header">
-    <div class="nav-container">
-        <div class="logo">MigraLaw Asesores</div>
-        <nav class="nav">
-            <a href="paginicio.html" class="nav-link">Inicio</a>
-            <a href="nosotros.html" class="nav-link">Nosotros</a>
-            <a href="servicios.html" class="nav-link active">Servicios</a>
-            <a href="noticias.html" class="nav-link">Noticias</a>
-            <a href="InicioSesion.html" class="nav-link">Iniciar sesión</a>
-            <a href="registro.html" class="btn btn-outline">Registro</a>
-        </nav>
+<header class="nav">
+    <div class="nav__container">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav__logo">
+        <img src="logo.png" alt="Logo" />
+      </a>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Links / Menú -->
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="paginicio.html" class="nav__link" data-page="index.html">Inicio</a>
+        <a href="nosotros.html" class="nav__link" data-page="nosotros.html">Nosotros</a>
+
+        <!-- Servicios con dropdown -->
+        <div class="nav__dropdown">
+          <button class="nav__link nav__dropbtn" type="button">
+            Servicios <span class="nav__arrow">▾</span>
+          </button>
+
+          <div class="nav__dropmenu">
+            <a href="servicios-individuales-grupos.html">Servicios individuales y de grupos</a>
+            <a href="servicios-empresas-profesionales.html">Servicios para empresas y profesionales</a>
+            <a href="homologacion-titulos.html">Homologación de títulos</a>
+          </div>
+        </div>
+
+        <a href="noticias.html" class="nav__link" data-page="noticias.html">Noticias</a>
+
+        <!-- Acciones (en móvil quedan dentro del menú) -->
+        <div class="nav__actions">
+
+          <!-- Idioma (mundo) -->
+          <div class="nav__dropdown nav__dropdown--lang">
+            <button class="nav__langbtn" type="button" aria-label="Cambiar idioma">
+              <span class="nav__world" aria-hidden="true">🌍</span>
+              <span class="nav__langtext">ES</span>
+              <span class="nav__arrow">▾</span>
+            </button>
+
+            <div class="nav__dropmenu nav__dropmenu--right">
+              <a href="?lang=es" data-lang="es">Español</a>
+              <a href="?lang=en" data-lang="en">English</a>
+            </div>
+          </div>
+
+          <a href="InicioSesion.html" class="nav__login">Iniciar sesión</a>
+          <a href="registro.html" class="nav__btn">Registro</a>
+        </div>
+      </nav>
+
     </div>
-</header>
+  </header>
+
 
 <section class="banner">
     <h1>Servicios</h1>
@@ -157,7 +202,11 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <script src="../js/scriptservi.js"></script>
+=======
+<script src="../js/script.js"></script>
+>>>>>>> 5a2941f (Mis cambios)
 
 </body>
 </html>
