@@ -27,7 +27,7 @@ Luego en la terminal:
 git add .
 git rebase --continue
 
-trae los cmabios de git los coloca encima los cambios
+trae los cambios de git los coloca encima los cambios
 evita duplicados
 
 git pull origin main --rebase
