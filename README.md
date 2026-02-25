@@ -27,22 +27,8 @@ Luego en la terminal:
 git add .
 git rebase --continue
 
+trae los cmabios de git los coloca encima los cambios
+evita duplicados
 
-SIRVE PARA VER EL ERROR REAL
-git status
-git remote -v
-git branch
-
-subir cambios y bajar los nuevos
-
-git add
-git commit -m
-git pull --rebase
-git push
-
-baja lo que este en git y reescribe lo que tienes
-git pull --rebase origin main
+git pull origin main --rebase
 git push origin main
-
-si aparece conflicto  coloca
-git status
