@@ -28,7 +28,7 @@ git add .
 git rebase --continue
 
 
-SIRVE PARA VER EL ERROR REAL 
+SIRVE PARA VER EL ERROR REAL
 git status
 git remote -v
 git branch
